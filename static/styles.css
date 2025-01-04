@@ -1,0 +1,131 @@
+/* Import a cool font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+
+/* Body styling */
+body {
+    font-family: 'Poppins', sans-serif; /* Apply the new font */
+    margin: 0;
+    padding: 0;
+    background-image: url('https://images.unsplash.com/photo-1516542076529-4b9e2e7e7f9b'); /* Example background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Makes sure the content is centered vertically */
+}
+
+/* Container to hold the weather app content */
+.container {
+    width: 90%;
+    max-width: 500px;
+    background-color: rgba(255, 255, 255, 0.85); /* Slightly opaque background */
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+    text-align: center;
+}
+
+/* Header styling */
+h1 {
+    font-size: 2.5rem; /* Larger, bolder header */
+    margin-bottom: 20px;
+    color: #333; /* Dark text for good contrast */
+    font-weight: 700; /* Make header bolder */
+}
+
+/* Form and input fields styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+label, select, input {
+    font-size: 1.2rem; /* Larger text size */
+    margin: 15px 0;
+    padding: 12px;
+    width: 80%;
+    max-width: 400px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-weight: 600; /* Bolder input text */
+}
+
+button {
+    padding: 12px 24px;
+    font-size: 1.3rem; /* Larger buttons */
+    background-color: #4CAF50; /* Green background for button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700; /* Bold button text */
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+/* Weather result area styling */
+#weatherResult {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Weather details styling */
+#weatherCity {
+    font-size: 2rem; /* Larger city name */
+    font-weight: 700; /* Bold city name */
+    margin-bottom: 10px;
+}
+
+#weatherTemp, #weatherCondition {
+    font-size: 1.5rem; /* Larger temperature and condition text */
+    margin-top: 10px;
+}
+
+/* Editable fields styling */
+#editLocation, #editTempUnit {
+    width: 80%;
+    max-width: 400px;
+    margin-top: 10px;
+    padding: 12px;
+    font-size: 1.2rem; /* Larger editable fields */
+}
+
+#updateWeather {
+    padding: 12px 24px;
+    background-color: #007BFF; /* Blue background for update button */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 1.3rem; /* Larger update button */
+    font-weight: 700;
+}
+
+#updateWeather:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Hide the "Enter Location" input initially */
+#locationWrapper {
+    display: none;
+}
+
+/* Add responsive design for mobile devices */
+@media (max-width: 600px) {
+    .container {
+        width: 90%;
+    }
+
+    label, select, input {
+        width: 100%;
+    }
+}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Weather Dashboard</h1>
+        <form id="cityForm">
+            <label for="locationType">Select location type:</label>
+            <select id="locationType">
+                <option value="city">City</option>
+                <option value="state">State</option>
+                <option value="country">Country</option>
+                <option value="manual">Manual Address</option>
+            </select>
+
+            <input type="text" id="locationInput" placeholder="Enter location" required>
+
+            <label for="tempUnit">Select temperature unit:</label>
+            <select id="tempUnit">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+            </select>
+
+            <button type="submit">Get Weather</button>
+        </form>
+
+        <div id="weatherResult" style="display:none;">
+            <h2 id="weatherCity"></h2>
+            <p id="weatherTemp"></p>
+            <p id="weatherCondition"></p>
+            <img id="weatherIcon" alt="Weather icon">
+
+            <!-- Editable fields -->
+            <label for="editLocation">Edit Location:</label>
+            <input type="text" id="editLocation" placeholder="Enter new location">
+
+            <label for="editTempUnit">Edit Temperature Unit:</label>
+            <select id="editTempUnit">
+                <option value="C">Celsius (°C)</option>
+                <option value="F">Fahrenheit (°F)</option>
+                <option value="K">Kelvin (K)</option>
+            </select>
+
+            <button id="updateWeather">Update Weather</button>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
