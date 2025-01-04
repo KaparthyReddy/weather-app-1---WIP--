@@ -18,7 +18,11 @@
                 <option value="manual">Manual Address</option>
             </select>
 
-            <input type="text" id="locationInput" placeholder="Enter location" required>
+            <!-- Initially hidden location input -->
+            <div id="locationWrapper" style="display:none;">
+                <label for="locationInput" id="locationLabel">Enter location</label>
+                <input type="text" id="locationInput" placeholder="Enter location" required>
+            </div>
 
             <label for="tempUnit">Select temperature unit:</label>
             <select id="tempUnit">
